@@ -3,12 +3,12 @@
 #
 
 # Name of your site (displayed in the header)
-name: h25 blog
+name: Cyber Blog
 # Short bio or description (displayed in the header)
-description: Competitive programming, CTF & other challenges
+description: Cybersecurity Blog
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/MathisHammel/MathisHammel.github.io/master/images/h25_logo.png
+avatar: https://raw.githubusercontent.com/Heisenberk/Heisenberk.github.io/master/images/cyber-blog_logo.png
 
 #
 # Flags below are optional
@@ -17,15 +17,15 @@ avatar: https://raw.githubusercontent.com/MathisHammel/MathisHammel.github.io/ma
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: contact@h25.io
+  email: 
   facebook:
   flickr:
-  github:
+  github: https://www.github.com/Heisenberk
   instagram:
-  linkedin: h25io
+  linkedin: https://www.linkedin.com/in/clement-caumes
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: h25io
+  twitter:
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -36,11 +36,11 @@ footer-links:
 disqus:
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
-google_analytics: UA-129006660-1
+google_analytics: 
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url: https://blog.h25.io/
+url: 
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
