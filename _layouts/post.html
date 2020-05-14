@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  <div class="date">
+    Written on {{ page.date | date: "%B %e, %Y" }}
+  </div>
+  
+  Follow us on Twitter to be informed about new posts ! <a href="https://twitter.com/h25io?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @h25io</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  {% include disqus.html %}
+</article>
