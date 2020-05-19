@@ -4,12 +4,13 @@ title: About
 permalink: /about/
 ---
 
-Description Heisenberk
+UVSQ Student, CTF Player. 
+Forensics and Intrusion Detection are my favorite fields of work.
 
-### Contact us
+### Contact me
 
-E-mail : 
+Join my Discord server : [Cyb3r Tch4t](https://discord.gg/tm6Du4Q)
 
-Github : [https://github.com/Heisenberk](https://github.com/Heisenberk)
+My Github : [www.github.com/Heisenberk](https://github.com/Heisenberk)
 
-LinkedIn : [www.linkedin.com/in/clement-caumes](https://www.linkedin.com/in/clement-caumes)
+My LinkedIn : [www.linkedin.com/in/clement-caumes](https://www.linkedin.com/in/clement-caumes)
