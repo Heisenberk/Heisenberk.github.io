@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Identify the correct profile with a memory dump
+title: Identify the correct profile with a memory dump (Volatility)
 ---
 
 This section explains how find the profile of a memory dump with Volatility. 
