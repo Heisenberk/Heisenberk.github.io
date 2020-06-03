@@ -3,7 +3,7 @@ layout: post
 title: Identify the correct profile with a memory dump (Volatility)
 ---
 
-This section explains how find the profile of a memory dump with Volatility. 
+This section explains how to find the profile of a Windows/Linux memory dump with Volatility. 
 
 In fact, the process is different according to the Operating System (Windows, Linux, MacOSX)
 
