@@ -7,23 +7,25 @@ This section explains how to make a memory dump on Windows and Linux.
 
 ### Make a memory dump on Windows
 
-#### Make a memory dump of a specific process
-
-Open the task manager and determine the PID of the targeted process.
-
-With **procdump (you can find it <a href="{{ site.baseurl }}/downloads/procdump.zip" target="_blank">here</a>)** : 
-
-```sh
-procdump.exe <pid>
-```
-
-#### Make a memory dump of all the memory
-
 With **DumpIt (you can find it <a href="{{ site.baseurl }}/downloads/DumpIt.zip" target="_blank">here</a>)** : 
 
 ```sh
-DumpIt.exe <pid>
+$ DumpIt.exe
 ```
 
 Then , you can analyse the result with volatility.
+
+### Make a memory dump on Linux
+
+```sh
+$ git clone https://github.com/504ensicsLabs/LiME
+$ cd LiME/src
+$ make
+$ cd ~
+$ sudo insmod ./LiME/src/lime-XXX.ko path=./mem.dmp format=lime
+$ ls 
+LiME	mem.dmp
+```
+
+Then , you can analyse the result with volatility. Do not forget to determine the correct profile before.
 
