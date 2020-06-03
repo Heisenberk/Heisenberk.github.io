@@ -22,13 +22,38 @@ $ volatility -f dump.mem --profile=Win7SP1x86 cmdline
 ### Identify the profile for Linux
 
 ```sh
-$ strings mem.raw | grep -i 'Linux version' | uniq
+$ strings dump.raw | grep -i 'Linux version' | uniq
 Linux version 4.4.0-72-lowlatency (buildd@lcy01-17) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) )
 ```
 
 Now, you can get the identified profile on Github [here](https://github.com/volatilityfoundation/profiles/tree/master/Linux). If you don't find the profile, 
 you must create it. 
 
+#### Create a profile for Linux
+
+To create the correct profile, you have to get the same print when you make these commands : 
+
+```sh
+$ strings dump.raw | grep -i 'Linux version' | uniq
+Linux version 4.4.0-72-lowlatency (buildd@lcy01-17) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) )
+
+$ uname -a
+Linux version 4.4.0-72-lowlatency (buildd@lcy01-17) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) )
+```
+
+If you don't have the correct kernel version because you don't find the correct virtual machine, you can upgrade/downgrade your kernel. 
+
+Then, you can make the profile : 
+
+```sh
+$ sudo apt install linux-image-4.4.0-72-lowlatency linux-headers-4.4.0-72-lowlatency
+$ sudo apt install build-essential dwarfdump
+$ git clone --depth=1 https://github.com/volatilityfoundation/volatility
+$ cd volatility/tools/linux
+$ make
+$ sudo zip Ubuntu1604.zip volatility/tools/linux/module.dwarf /boot/System.map-4.4.0-72-lowlatency
+$ mv Ubuntu1604.zip /usr/lib/python2.7/dist-packages/volatility/plugins/linux/
+```
 
 ### Identify the profile for MacOSX
 
