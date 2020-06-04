@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Make a memory dump to analyze it (Volatility)
+title: Make a memory dump to analyze it - Volatility
 ---
 
 This section explains how to make a memory dump on Windows and Linux. 
@@ -27,5 +27,5 @@ $ ls
 LiME	mem.dmp
 ```
 
-Then , you can analyse the result with volatility. Do not forget to determine the correct profile before.
+Then, you can analyse the result with volatility. Do not forget to determine the correct profile before.
 
