@@ -104,7 +104,7 @@ You can delete the option ```-p/--pid``` to discover all opened files.
 - Print current commands : 
 
 ```sh
-$ python vol.py -f avgcoder.mem --profile=LinuxCentOS63x64 linux_bash
+$ volatility -f mem.dmp --profile=LinuxCentOS63x64 linux_bash
 Volatility Foundation Volatility Framework 2.3_alpha
 Pid      Name                 Command Time                   Command
 -------- -------------------- ------------------------------ -------
