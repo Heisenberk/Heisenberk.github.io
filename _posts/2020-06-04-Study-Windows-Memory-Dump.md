@@ -1,40 +1,12 @@
 ---
 layout: post
-title: Study a memory dump - Volatility
+title: Study a live Windows memory dump - Volatility
 ---
 
-This section explains the main commands in Volatility to analyze a memory dump. 
+This section explains the main commands in Volatility to analyze a Windows memory dump. 
 
-### Introduction
 
-Before analyzing a memory dump with Volatility, you can conduct a little background research : 
-
-- use strings and grep to determine some simple information : 
-
-```sh
-strings mem.dmp | grep -B 10 -A 20 "some text"
-```
-
-This example prints results with 10 lines before the result and 20 lines after the result.
-
-- extract a pcap file which represents packets passing through the machine : 
-
-```sh
-$ bulk_extractor -x all -e net -o mem.dmp
-```
-
-- extract (specific) files : 
-
-```sh
-$ foremost -o result/ -t zip -i mem.dmp
-$ binwalk --dd='.*' mem.dmp
-```
-
-In these examples, foremost extracts zip files and binwalk extracts all files in the memory dump.
-
-### Windows memory dump
-
-#### Windows Environment
+### Windows Environment
 
 - See environment variables like the number of CPUs installed, the hardware architecture, the process's current directory, temporary directory, session name, computer name, user name... :
 
@@ -77,7 +49,7 @@ S----:1006:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
 ```
 Then, with <a href="https://crackstation.net/" target="_blank">crackstation</a>, or John with a good dictionary, you can recover passwords.
 
-#### Windows Processes
+### Windows Processes
 
 - See the tree of processes :
 
@@ -189,7 +161,7 @@ $ ls -alh dmp/4.dmp
 -rw-r--r--  1 Michael  staff   111M Jun 24 15:47 dump/4.dmp
 ```
 
-#### Windows files
+### Windows files
 
 - List cached files : 
 
@@ -238,7 +210,7 @@ $ volatility -f mem.dmp --profile=Win7SP0x86 dumpfiles -Q 0x00000000007f3270 -D 
 $ volatility -f mem.dmp --profile=Win7SP0x86 dumpfiles -D output/ -r ABCDE -i -S summary.txt
 ```
 
-#### Windows networking
+### Windows networking
 
 - View active TCP connections : 
 

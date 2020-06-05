@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Make a memory dump to analyze it - Volatility
+title: Make a live memory dump to analyze it - Volatility
 ---
 
 This section explains how to make a memory dump on Windows and Linux. 
