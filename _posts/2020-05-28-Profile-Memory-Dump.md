@@ -65,3 +65,21 @@ MacSierra_11_8_1_AMDx64              0x00004000000
 ```
 
 in the same way, you can download the correct profile on Github [here](https://github.com/volatilityfoundation/profiles/tree/master/Mac) or create it. 
+
+### Use a plugin
+
+To use a plugin, you have to specify the plugin. But, sometimes, you download a new plugin. So, to use it : 
+
+```sh
+# if you have a Windows plugin
+$ sudo cp plugin.py /usr/lib/python2.7/dist-packages/volatility/plugins/
+$ volatility -f mem.dmp --profile=Win7SP1x86 plugin
+
+# if you have a Linux plugin
+$ sudo cp linux_plugin.py /usr/lib/python2.7/dist-packages/volatility/plugins/linux/
+$ volatility -f mem.dmp --profile=LinuxUbuntu1204x64 linux_plugin
+
+# if you have a MacOSX plugin
+$ sudo cp mac_plugin.py /usr/lib/python2.7/dist-packages/volatility/plugins/mac/
+$ volatility --profile=MacMountainLion_10_8_3_AMDx64 -f mem.dmp mac_plugin
+```
