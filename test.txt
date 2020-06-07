@@ -1,0 +1,12 @@
+$ ./findaes ../memory.raw 
+Searching ../memory.raw
+Found AES-128 key schedule at offset 0x1c5f6c30: 
+1f ab 01 5c 1e 3d f9 ea c8 72 8f 65 a3 d1 66 46
+
+$ echo 1fab015c1e3df9eac8728f65a3d16646 | xxd -r -p > key.bin
+
+$ mkdir mount
+$ sudo cryptsetup --master-key-file key.bin luksOpen forensic.img mount
+$ sudo mount /dev/mapper/mount mount
+$ cd mount/
+
