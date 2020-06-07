@@ -5,8 +5,21 @@ Found AES-128 key schedule at offset 0x1c5f6c30:
 
 $ echo 1fab015c1e3df9eac8728f65a3d16646 | xxd -r -p > key.bin
 
-$ mkdir mount
-$ sudo cryptsetup --master-key-file key.bin luksOpen forensic.img mount
-$ sudo mount /dev/mapper/mount mount
-$ cd mount/
+$ mkdir mount2
+$ sudo cryptsetup --master-key-file key.bin luksOpen forensic.img mount2
+$ sudo mount /dev/mapper/mount2 mount2
+$ cd mount2/
+$ [...]
+$ cd ..
+$ sudo umount mount2
+
+$ mkdir mount1
+$ sudo cryptsetup luksOpen forensic.img azerty
+Enter passphrase for forensic.img: 
+$ sudo mount /dev/mapper/mount1 mount1/
+$ cd mount1/
+$ [...]
+$ cd ..
+$ sudo umount mount1
+
 
