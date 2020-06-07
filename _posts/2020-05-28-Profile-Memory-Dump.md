@@ -81,5 +81,5 @@ $ volatility -f mem.dmp --profile=LinuxUbuntu1204x64 linux_plugin
 
 # if you have a MacOSX plugin
 $ sudo cp mac_plugin.py /usr/lib/python2.7/dist-packages/volatility/plugins/mac/
-$ volatility --profile=MacMountainLion_10_8_3_AMDx64 -f mem.dmp mac_plugin
+$ volatility -f mem.dmp --profile=MacMountainLion_10_8_3_AMDx64 mac_plugin
 ```
