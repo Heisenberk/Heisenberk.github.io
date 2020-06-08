@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+	<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+    <script type="text/javascript">
+(function () {
+
+  'use strict';
+
+  var SgConverter = function () {
+    var that = this;
+
+    this.converters = ['decimal', 'hexadecimal', 'binary'];
+    this.inputElements = {};
+
+    this.decimalToHexadecimal = function (decimalValue) {
+      return parseInt(decimalValue, 10).toString(16);
+    };
+
+    this.decimalToBinary = function (decimalValue) {
+      return parseInt(decimalValue, 10).toString(2);
+    };
+
+    this.hexadecimalToDecimal = function (hexadecimalValue) {
+      return parseInt(hexadecimalValue, 16);
+    };
+
+    this.hexadecimalToBinary = function (hexadecimalValue) {
+      return (parseInt(hexadecimalValue, 16)).toString(2);
+    };
+
+    this.binaryToDecimal = function (binaryValue) {
+      return parseInt(binaryValue, 2);
+    };
+
+    this.binaryToHexadecimal = function (binaryValue) {
+      return (parseInt(binaryValue, 2)).toString(16);
+    };
+
+    this.convert = function (sourceType) {
+      var sourceValue = this.inputElements[sourceType].value;
+      this.converters.forEach(function (converter) {
+        if (converter !== sourceType) {
+          var ucConverter = converter.charAt(0).toUpperCase() + converter.slice(1);
+          var converterMethod = sourceType + 'To' + ucConverter;
+          that.inputElements[converter].value = that[converterMethod](sourceValue);
+        }
+      });
+    }; // convert
+
+    this.update = function (event) {
+      that.convert(event.target.id);
+    };
+  }; // onEnterKey
+
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('decimal').focus();
+    var sgConverter = new SgConverter();
+    sgConverter.converters.forEach(function (converter) {
+      sgConverter.inputElements[converter] = document.getElementById(converter);
+      document.getElementById(converter).nextElementSibling.addEventListener('click', function () {
+        sgConverter.convert(converter);
+      }, false );
+
+      ['keyup', 'change'].forEach(function (event) {
+        document.getElementById(converter).addEventListener(event, sgConverter.update, false);
+      });
+
+    });
+  }); // DOMContentLoaded
+
+}()); // IIFE
+</script>
+<style type="text/css">
+input[type='text'], input[type='number'] {
+  text-transform:uppercase;
+  display: inline-block;
+  min-width: 40%;
+}
+label {
+  display: inline-block;
+  min-width: 15%;
+  text-align: right;
+}
+</style>
+
+
+
+	
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+            <p class="site-description">{{ site.description }}</p>
+          </div>
+
+          <nav>
+            <a href="{{ site.baseurl }}/">Blog</a>
+			<a href="{{ site.baseurl }}/cheatsheet">CheatSheet</a>
+            <a href="{{ site.baseurl }}/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <form action="">
+  <fieldset>
+    <legend>Convertir</legend>
+    <p>
+      <label for="decimal">Décimal</label>
+      <input type="number" id="decimal" name="decimal">
+      <input type="button" value="↔️">
+    </p>
+
+    <p>
+      <label for="hexadecimal">Hexadécimal</label>
+      <input type="text" id="hexadecimal" name="hexadecimal">
+      <input type="button" value="↔️">
+    </p>
+
+    <p>
+      <label for="binary">Binaire</label>
+      <input type="text" id="binary" name="binary">
+      <input type="button" value="↔️">
+    </p>
+  </fieldset>
+
+</form>
+
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          {% include svg-icons.html %}
+        </footer>
+      </div>
+    </div>
+
+    {% include analytics.html %}
+  </body>
+</html>

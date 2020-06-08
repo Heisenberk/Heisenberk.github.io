@@ -1,10 +1,8 @@
 ---
-layout: page
+layout: cheatsheet
 title: CheatSheet
 permalink: /cheatsheet/
 ---
-
-This page gathers all tools used for CTF.
 
 ### Ascii Table 
 
