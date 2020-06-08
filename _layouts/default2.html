@@ -122,9 +122,11 @@ label {
       </div>
     </div>
 
-    <form action="">
+    <div id="main" role="main" class="container">
+      {{ content }}
+
+       <form action="">
   <fieldset>
-    <legend>Convertir</legend>
     <p>
       <label for="decimal">Décimal</label>
       <input type="number" id="decimal" name="decimal">
@@ -146,8 +148,6 @@ label {
 
 </form>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
     </div>
 
     <div class="wrapper-footer">
