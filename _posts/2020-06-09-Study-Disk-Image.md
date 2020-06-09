@@ -130,6 +130,7 @@ Archive:  flag.zip
 password incorrect--reenter: 
 ```
 - It is an incorrect password and unfortunately, we don't have any others useful strings. So, we will bruteforce the password : 
+
 ```sh
 $ fcrackzip -v -u -D -p /usr/share/wordlists/rockyou.txt flag.zip 
 found file 'flag.txt', (size cp/uc     59/    47, flags 9, chk 4eb7)
@@ -145,5 +146,6 @@ FAT1  FAT2  flag.txt  flag.zip  image.dd  MBR  OrphanFiles  ziEuYrJW
 $ cat flag.txt 
 ECSC{eefea8cda693390c7ce0f6da6e388089dd615379}
 ```
+
 GOTCHA! 
 This challenge was very easy but it allows to show how analyze a disk image. 
