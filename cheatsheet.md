@@ -4,40 +4,38 @@ title: CheatSheet
 permalink: /cheatsheet/
 ---
 
-### Multi-Function Decoder
+### Useful websites
 
-To encode/decode Base64, hexadecimal, ciphers ... : 
-**<a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef.com</a>**
+|Tool|Description|
+|-----|----------|
+|**<a href="https://gchq.github.io/CyberChef/" target="_blank">CyberChef.com</a>**|to encode/decode Base64, hexadecimal, ciphers ... : |
+|**<a href="https://crackstation.net/" target="_blank">CrackStation.net</a>**| to decode password written in different hashes|
+|**<a href="http://www.decompiler.com/" target="_blank">Decompiler.com</a>** | to transform APK file to Java files representing the source code|
 
-### Password Hash Cracker
-
-To decode password written in different hashes : 
-**<a href="https://crackstation.net/" target="_blank">CrackStation.net</a>**
-
-### Decompiler APK
-
-To transform APK file to Java files representing the source code : 
-**<a href="http://www.decompiler.com/" target="_blank">Decompiler.com</a>**
 
 ### Extract files 
 
 To extract data from files : 
 
-```sh
-$ foremost -o result/ -t zip -i mem.dmp
-$ binwalk --dd='.*' mem.dmp
-```
+|Tool|Description|Usage|
+|-----|-------------|-------|
+|```foremost```|Extract data from specific files|```foremost -o result/ -t zip -i mem.dmp``` to extract zip files|
+|```binwalk```|Extract all data|```binwalk --dd='.*' mem.dmp```|
 
 ### Analyze an executable 
 
-To analyse the behaviour of an executable (APK, PE, ELF...) : 
-**<a href="https://www.virustotal.com" target="_blank">VirusTotal.com</a>**
+|Tool|Description|
+|-----|----------|
+|**<a href="https://www.virustotal.com" target="_blank">VirusTotal.com</a>** | to analyse the behaviour of an executable (APK, PE, ELF...)|
+
 
 ### Analyze a live memory dump
 
-- To analyze a Windows live memory dump : **<a href="https://github.com/volatilityfoundation/volatility/wiki/Command-Reference" target="_blank">here</a>**
-- To analyze a Linux live memory dump : **<a href="https://github.com/volatilityfoundation/volatility/wiki/Linux-Command-Reference" target="_blank">here</a>**
-- To analyze a MacOSX live memory dump : **<a href="https://github.com/volatilityfoundation/volatility/wiki/Mac-Command-Reference" target="_blank">here</a>**
+|Tool|Description|
+|-----|----------|
+|**<a href="https://github.com/volatilityfoundation/volatility/wiki/Command-Reference" target="_blank">Volatility Windows</a>** | to analyze a Windows live memory dump|
+|**<a href="https://github.com/volatilityfoundation/volatility/wiki/Linux-Command-Reference" target="_blank">Volatility Linux</a>**| to analyze a Linux live memory dump|
+|**<a href="https://github.com/volatilityfoundation/volatility/wiki/Mac-Command-Reference" target="_blank">Volatility MacOSX</a>**| to analyze a MacOSX live memory dump|
 
 ### Analyze a random file 
 

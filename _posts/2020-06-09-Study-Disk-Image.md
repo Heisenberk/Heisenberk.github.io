@@ -37,7 +37,6 @@ For a EWF/expert Witness/EnCase image file, you can not use ```mount```. The onl
 ```sh
 $ mkdir mount
 $ ewfmount disk3.e01 mount/
-
 ```
 
 ### Extract deleted files
