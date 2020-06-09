@@ -28,6 +28,15 @@ To transform APK file to Java files representing the source code :
 To analyse the behaviour of an executable (APK, PE, ELF...) : 
 **<a href="https://www.virustotal.com" target="_blank">VirusTotal.com</a>**
 
+### Extract files 
+
+To extract data from files : 
+
+```sh
+$ foremost -o result/ -t zip -i mem.dmp
+$ binwalk --dd='.*' mem.dmp
+```
+
 <!-- This title allows to print the convertor in cheatsheet.html (HAVE TO BE THE LAST TITLE)-->
 ### Hexadecimal/decimal/binary convertor from sebastienguillon.com
 
