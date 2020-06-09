@@ -3,9 +3,22 @@ layout: post
 title: Study a live memory dump
 ---
 
-This section explains how to analyze a memory dump before using Volatility. 
+This section explains how to analyze a memory dump before using Volatility : extracting files and secrets.
 
 Before analyzing a memory dump with Volatility, you can conduct a little background research : 
+
+### Live Memory Dump Format
+
+The format of a memory dump can be : 
+- full data 
+- a core file 
+
+```sh
+$ file mem1.dmp
+mem1.dmp:	data
+$file mem2.dmp
+mem2.dmp:	ELF 64-bit LSB core file, x86-64, version 1 (SYSV)	
+```
 
 ### Extract files
 

@@ -4,7 +4,6 @@ title: Identify the correct profile with a live memory dump - Volatility
 ---
 
 This section explains how to find the profile of a Windows/Linux memory dump with Volatility. 
-
 In fact, the process is different according to the Operating System (Windows, Linux, MacOSX)
 
 ### Identify the profile for Windows 

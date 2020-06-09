@@ -22,6 +22,16 @@ To extract data from files :
 |```foremost```|Extract data from specific files|```foremost -o result/ -t zip -i mem.dmp``` to extract zip files|
 |```binwalk```|Extract all data|```binwalk --dd='.*' mem.dmp```|
 
+### Bruteforce
+
+- crunch [MIN] [MAX] [CONTENT] : 
+
+```sh
+crunch 4 10 “abcdefghijklmnopqrstuvwxyz”
+```
+
+- john [HASHFILE] --wordlist=/usr/share/wordlists/rockyou.txt
+
 ### Analyze an executable 
 
 |Tool|Description|
