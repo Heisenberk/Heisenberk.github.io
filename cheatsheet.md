@@ -24,13 +24,14 @@ To extract data from files :
 
 ### Bruteforce
 
-- crunch [MIN] [MAX] [CONTENT] : 
-
 ```sh
-crunch 4 10 “abcdefghijklmnopqrstuvwxyz”
+$ crunch 4 10 “abcdefghijklmnopqrstuvwxyz”
 ```
 
-- john [HASHFILE] --wordlist=/usr/share/wordlists/rockyou.txt
+```sh
+$ unshadow /etc/passwd /etc/shadow > mypasswd
+$ john mypasswd --wordlist=/usr/share/wordlists/rockyou.txt
+```
 
 ### Analyze an executable 
 
