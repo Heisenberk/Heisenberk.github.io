@@ -37,7 +37,7 @@ $ foremost -o result/ -t zip -i mem.dmp
 $ binwalk --dd='.*' mem.dmp
 ```
 
-<!-- This title allows to print the convertor in cheatsheet.html (HAVE TO BE THE LAST TITLE)-->
-### Hexadecimal/decimal/binary convertor from sebastienguillon.com
+<!-- This title allows to print the convertor in cheatsheet.html (HAVE TO BE THE LAST TITLE)
+### Hexadecimal/decimal/binary convertor from sebastienguillon.com -->
 
 
