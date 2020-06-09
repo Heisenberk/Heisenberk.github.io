@@ -32,6 +32,14 @@ $ cd ..
 $ sudo umount disk2
 ```
 
+For a EWF/expert Witness/EnCase image file, you can not use ```mount```. The only way is : 
+
+```sh
+$ mkdir mount
+$ ewfmount disk3.e01 mount/
+
+```
+
 ### Extract deleted files
 
 - You can list files and folders with ```fls```. Deleted files are mentioned by a ```*```
