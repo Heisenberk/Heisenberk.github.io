@@ -6,6 +6,13 @@ layout: default-forensics
 
   <h1>{{ page.title }}</h1>
 
-  <a href="{{ site.baseurl }}/memory-forensics-live">Live Memory Analysis</a>
-  <a href="{{ site.baseurl }}/memory-forensics-disk">Disk Memory Analysis</a>
+  <!--<a href="{{ site.baseurl }}/memory-forensics-live">Live Memory Analysis</a>
+  <a href="{{ site.baseurl }}/memory-forensics-disk">Disk Memory Analysis</a>-->
+
+  <form action="{{ site.baseurl }}/memory-forensics-live" method="get">
+      <input type="submit" value="Live Memory Analysis"class="category"/>
+  </form>
+  <form action="{{ site.baseurl }}/memory-forensics-disk" method="get">
+      <input type="submit" value="Disk Memory Analysis"class="category"/>
+  </form>
 </article>
