@@ -147,6 +147,32 @@ coefficient =
 
 A Write-up is available **<a href="{{ site.baseurl }}/Academy-Investigation-FCSC-2020/" target="_blank">here</a>** to explain key-RSA use.
 
+#### Extract TrueCrypt key 
+
+There is a volatility plugin to extract the key used to decrypt a truecrypt container : 
+
+```sh
+volatility -f mem.dmp --profile=Win7SP1x86 truecryptsummary
+Volatility Foundation Volatility Framework 2.5
+Registry Version     TrueCrypt Version 7.0a
+Password             A_Very_Bad_Passw0rd at offset 0x01224426
+[...]
+```
+
+### Extract Bitlocker key 
+
+There is a volatility plugin to extract the key used to decrypt a bitlocker volume : 
+
+```sh
+$ vol -f mem.dmp --profile Win7SP1x64 bitlocker
+Volatility Foundation Volatility Framework 2.5
+
+Address : 0xfa8009958c10
+Cipher  : AES-256
+FVEK    : d5b6e71adb0c2e2d38dafdcedade8fc11e8be631b9fed5b2ba5b51ba32a57cd1
+TWEAK   : 49f9ecd5ddffcae44cde7f7a578b9a3ca5e79087826779e147de89423ebdf3f3
+```
+
 ### Next step 
 
 Now you can study the memory dump with Volatility : firstly, find the correct profile and then, use different commands to understand the content of the memory dump.
