@@ -159,7 +159,7 @@ Password             A_Very_Bad_Passw0rd at offset 0x01224426
 [...]
 ```
 
-### Extract Bitlocker key 
+#### Extract Bitlocker key 
 
 There is a volatility plugin to extract the key used to decrypt a bitlocker volume : 
 

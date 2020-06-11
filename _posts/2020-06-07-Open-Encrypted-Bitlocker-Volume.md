@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Open a Bitlocker encrypted volume
+title: Open an encrypted Bitlocker volume
 ---
 
-This section explains how to find the key and open a Bitlocker encrypted volume. 
+This section explains how to find the key and open an encrypted Bitlocker volume. 
 
 ### Identify a partition encrypted with Bitlocker
 
