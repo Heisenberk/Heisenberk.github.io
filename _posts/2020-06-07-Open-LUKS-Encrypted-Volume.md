@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Open a LUKS encrypted file
+title: Open a LUKS encrypted volume
 ---
 
-This section explains how to open a LUKS encrypted file. 
+This section explains how to open a LUKS encrypted volume. 
 
 ```sh
 backup/forensic.img: LUKS encrypted file, ver 1 [aes, ecb, sha1] UUID: f832c51b-4f4d-446d-9d21-746b5c26095b
