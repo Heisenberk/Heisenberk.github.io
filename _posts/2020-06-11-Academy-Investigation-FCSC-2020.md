@@ -5,6 +5,8 @@ title: Academy of Investigation - Administration - FCSC 2020
 
 This section is the write-up for the Academy of Investigation forensics-challenge (FCSC 2020). 
 
+We have a live memory dump named ```mem.dmp``` and an encrypted file ```flag.txt.enc```.
+
 ```
 Ce poste administre un serveur distant avec le protocole SSH à l’aide d’une authentification par clé (clé protégée par mot de passe). La clé publique a été utilisée pour chiffrer le message ci-joint (flag.txt.enc).
 ```
