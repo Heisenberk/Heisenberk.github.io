@@ -17,10 +17,10 @@ Password             A_Very_Bad_Passw0rd at offset 0x01224426
 [...]
 ```
 
-### Mount a Bitlocker volume
+### Mount a Truecrypt volume
 
 ```sh
 $ mkdir mount
-$ truecrypt volume_bitlocker media/
+$ truecrypt volume_truecrypt mount/
 # here it will prompt for a password (here the password is A_Very_Bad_Passw0rd)
 ```
