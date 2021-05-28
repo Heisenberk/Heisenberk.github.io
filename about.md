@@ -13,4 +13,4 @@ Join my Discord server : [Cyb3r Tch4t](https://discord.gg/tm6Du4Q)
 
 My Github : [www.github.com/Heisenberk](https://github.com/Heisenberk)
 
-My LinkedIn : [www.linkedin.com/in/clement-caumes](https://www.linkedin.com/in/clement-caumes)
+
